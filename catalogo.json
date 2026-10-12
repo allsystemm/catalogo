@@ -76,8 +76,19 @@
             "imagen": "productos/p6_f6177dd9.jpg?v=f6177dd9",
             "disponible": true,
             "destacado": false
+        },
+        {
+            "id": 7,
+            "nombre": "Chile guajillo",
+            "descripcion": "Chile seco de color rojo intenso, sabor característico y picor moderado. Ideal para preparar salsas, adobos, moles, marinados y una gran variedad de platillos mexicanos.",
+            "precio": 130.0,
+            "unidad": "kg",
+            "categoria": "Chiles secos",
+            "imagen": "productos/p7_35c14ba1.jpg?v=35c14ba1",
+            "disponible": true,
+            "destacado": false
         }
     ],
-    "actualizado": 1791793196702,
+    "actualizado": 1791793273552,
     "version": 1
 }
