@@ -120,8 +120,19 @@
             "imagen": "productos/p8_57efcdab.jpg?v=57efcdab",
             "disponible": true,
             "destacado": false
+        },
+        {
+            "id": 12,
+            "nombre": "jamaica nigeriana",
+            "descripcion": "Flor de jamaica seca, ideal para preparar aguas frescas, infusiones y bebidas refrescantes. Excelente opción para negocios de jugos, restaurantes, cocinas y comerciantes que buscan surtir productos de calidad.",
+            "precio": 120.0,
+            "unidad": "kg",
+            "categoria": "Chiles secos",
+            "imagen": "productos/p12_e4708872.jpg?v=e4708872",
+            "disponible": true,
+            "destacado": false
         }
     ],
-    "actualizado": 1791822596059,
+    "actualizado": 1791822681734,
     "version": 1
 }
