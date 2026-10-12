@@ -33,6 +33,17 @@
             "destacado": false
         },
         {
+            "id": 11,
+            "nombre": "ajo negro",
+            "descripcion": "El ajo negro se obtiene mediante un proceso de maduración controlada que transforma el ajo tradicional en un producto de color negro, textura suave y sabor dulce, con notas balsámicas",
+            "precio": 60.0,
+            "unidad": "pieza",
+            "categoria": "Ajos",
+            "imagen": "productos/p11_6a3e1d8b.jpg?v=6a3e1d8b",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 3,
             "nombre": "ajo número chicos",
             "descripcion": "Buscas ajo rendidor y a buen precio para tu negocio? Tenemos ajo cerrado de números chicos, ideal para negocios que buscan economía y abastecimiento para su venta diaria.",
@@ -121,6 +132,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791779652689,
+    "actualizado": 1791780431460,
     "version": 1
 }
