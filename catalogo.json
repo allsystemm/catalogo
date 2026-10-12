@@ -7,25 +7,24 @@
         "telefono": "55 7433 5367",
         "horario": "Lunes a sábado de 9:00 a 19:00",
         "notas": "Precios sujetos a cambio sin previo aviso. Aparta tu pedido por WhatsApp.",
-        "moneda": "MXN",
-        "logo": "logo.png?v=67f9b263"
+        "moneda": "MXN"
     },
     "productos": [
         {
-            "id": 4,
-            "nombre": "ajo coronas",
-            "descripcion": "¿Buscas ajos de calidad para surtir tu negocio? En El Jerezano tenemos ajo en corona, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan un producto de calidad para sus clientes.",
-            "precio": 80.0,
+            "id": 5,
+            "nombre": "ajo cerrado número grande",
+            "descripcion": "¡Calidad que destaca y satisface a tus clientes!\n¿Buscas ajo grande y de calidad para tu negocio? En El Jerezano tenemos ajo cerrado de número grande, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan ofrecer un producto de excelente presentación.",
+            "precio": 100.0,
             "unidad": "kg",
             "categoria": "Ajos",
-            "imagen": "productos/p4_75dc1c7c.jpg?v=75dc1c7c",
+            "imagen": "productos/p5_5667f43c.jpg?v=5667f43c",
             "disponible": true,
             "destacado": false
         },
         {
             "id": 2,
-            "nombre": "ajo desgranado",
-            "descripcion": "¿Tienes carnicería o preparas productos para la venta? Nuestro ajo degranado es ideal para moler, elaborar marinados, adobos, chorizos, longanizas, salsas y preparados de carne.ajos número chicos",
+            "nombre": "ajo degranado",
+            "descripcion": "¿Tienes carnicería o preparas productos para la venta? Nuestro ajo degranado es ideal para moler, elaborar marinados, adobos, chorizos, longanizas, salsas y preparados de carne.",
             "precio": 50.0,
             "unidad": "kg",
             "categoria": "Ajos",
@@ -34,20 +33,20 @@
             "destacado": false
         },
         {
-            "id": 5,
+            "id": 11,
             "nombre": "ajo negro",
-            "descripcion": "El ajo negro se obtiene mediante un proceso de maduración controlada que transforma el ajo tradicional en un producto de color negro, textura suave y sabor dulce, con notas balsámicas.\n🌿 Beneficios del ajo negro: ✅ Contiene compuestos antioxidantes. ✅ Aporta compuestos azufrados derivados del ajo. ✅ Puede contribuir a una alimentación saludable. ✅ Su sabor suave lo hace ideal para incluirlo en diferentes platillos.",
+            "descripcion": "El ajo negro se obtiene mediante un proceso de maduración controlada que transforma el ajo tradicional en un producto de color negro, textura suave y sabor dulce, con notas balsámicas",
             "precio": 60.0,
             "unidad": "pieza",
             "categoria": "Ajos",
-            "imagen": "productos/p5_6a3e1d8b.jpg?v=6a3e1d8b",
+            "imagen": "productos/p11_6a3e1d8b.jpg?v=6a3e1d8b",
             "disponible": true,
             "destacado": false
         },
         {
             "id": 3,
             "nombre": "ajo número chicos",
-            "descripcion": "¿Buscas ajo rendidor y a buen precio para tu negocio? Tenemos ajo cerrado de números chicos, ideal para negocios que buscan economía y abastecimiento para su venta diaria.",
+            "descripcion": "Buscas ajo rendidor y a buen precio para tu negocio? Tenemos ajo cerrado de números chicos, ideal para negocios que buscan economía y abastecimiento para su venta diaria.",
             "precio": 50.0,
             "unidad": "kg",
             "categoria": "Ajos",
@@ -67,24 +66,13 @@
             "destacado": false
         },
         {
-            "id": 6,
-            "nombre": "ajos número gandes",
-            "descripcion": "¿Buscas ajo grande y de calidad para tu negocio? En El Jerezano tenemos ajo cerrado de número grande, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan ofrecer un producto de excelente presentación.\n✅ Ajo de buen tamaño y calidad. ✅ Excelente presentación para la venta. ✅ Ideal para reventa y distribución. ✅ Precios especiales para compras de mayoreo.",
-            "precio": 100.0,
-            "unidad": "kg",
-            "categoria": "Ajos",
-            "imagen": "productos/p6_f6177dd9.jpg?v=f6177dd9",
-            "disponible": true,
-            "destacado": false
-        },
-        {
-            "id": 7,
-            "nombre": "Chile guajillo",
-            "descripcion": "Chile seco de color rojo intenso, sabor característico y picor moderado. Ideal para preparar salsas, adobos, moles, marinados y una gran variedad de platillos mexicanos.",
-            "precio": 130.0,
+            "id": 10,
+            "nombre": "chile mora",
+            "descripcion": "Chile seco de sabor intenso, aroma característico y picor agradable. Ideal para preparar salsas, adobos, moles y una gran variedad de recetas tradicionales mexicanas.",
+            "precio": 140.0,
             "unidad": "kg",
             "categoria": "Chiles secos",
-            "imagen": "productos/p7_35c14ba1.jpg?v=35c14ba1",
+            "imagen": "productos/p10_7d4a8d96.jpg?v=7d4a8d96",
             "disponible": true,
             "destacado": false
         },
@@ -94,23 +82,67 @@
             "descripcion": "Chile seco de color rojo oscuro, sabor ahumado y picor característico. Ideal para preparar salsas, adobos, moles y deliciosos platillos mexicanos.",
             "precio": 140.0,
             "unidad": "kg",
-            "categoria": "Ajos",
+            "categoria": "Chiles secos",
             "imagen": "productos/p9_898b5ac4.jpg?v=898b5ac4",
             "disponible": true,
             "destacado": false
         },
         {
+            "id": 4,
+            "nombre": "Coronas",
+            "descripcion": "¿Buscas ajos de calidad para surtir tu negocio? En El Jerezano tenemos ajo en corona, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan un producto de calidad para sus clientes.",
+            "precio": 80.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p4_75dc1c7c.jpg?v=75dc1c7c",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 8,
-            "nombre": "chile teja sin pata",
+            "nombre": "Jamaica nigeriana",
+            "descripcion": "Flor de jamaica seca, ideal para preparar aguas frescas, infusiones y bebidas refrescantes. Excelente opción para negocios de jugos, restaurantes, cocinas y comerciantes que buscan surtir productos de calidad.",
+            "precio": 120.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p8_e4708872.jpg?v=e4708872",
+            "disponible": true,
+            "destacado": false
+        },
+        {
+            "id": 12,
+            "nombre": "jamaica nigeriana",
+            "descripcion": "Flor de jamaica seca, ideal para preparar aguas frescas, infusiones y bebidas refrescantes. Excelente opción para negocios de jugos, restaurantes, cocinas y comerciantes que buscan surtir productos de calidad.",
+            "precio": 120.0,
+            "unidad": "kg",
+            "categoria": "Chiles secos",
+            "imagen": "productos/p12_e4708872.jpg?v=e4708872",
+            "disponible": true,
+            "destacado": false
+        },
+        {
+            "id": 6,
+            "nombre": "Chile guajillo",
+            "descripcion": "Chile seco de color rojo intenso, sabor característico y picor moderado. Ideal para preparar salsas, adobos, moles, marinados y una gran variedad de platillos mexicanos.",
+            "precio": 130.0,
+            "unidad": "kg",
+            "categoria": "Chiles secos",
+            "imagen": "productos/p6_35c14ba1.jpg?v=35c14ba1",
+            "disponible": true,
+            "destacado": false
+        },
+        {
+            "id": 7,
+            "nombre": "chile teja",
             "descripcion": "Chile seco de sabor intenso y característico, ideal para preparar salsas, adobos, guisos y diferentes recetas de la cocina mexicana. Excelente opción para cocinas, restaurantes, taquerías y negocios de alimentos.",
             "precio": 140.0,
             "unidad": "kg",
             "categoria": "Chiles secos",
-            "imagen": "productos/p8_57efcdab.jpg?v=57efcdab",
+            "imagen": "productos/p7_57efcdab.jpg?v=57efcdab",
             "disponible": true,
             "destacado": false
         }
     ],
-    "actualizado": 1791793461950,
+    "actualizado": 1791793583698,
     "version": 1
 }
