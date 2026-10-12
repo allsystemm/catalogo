@@ -87,8 +87,19 @@
             "imagen": "productos/p7_35c14ba1.jpg?v=35c14ba1",
             "disponible": true,
             "destacado": false
+        },
+        {
+            "id": 8,
+            "nombre": "chile teja sin pata",
+            "descripcion": "Chile seco de sabor intenso y característico, ideal para preparar salsas, adobos, guisos y diferentes recetas de la cocina mexicana. Excelente opción para cocinas, restaurantes, taquerías y negocios de alimentos.",
+            "precio": 140.0,
+            "unidad": "kg",
+            "categoria": "Chiles secos",
+            "imagen": "productos/p8_57efcdab.jpg?v=57efcdab",
+            "disponible": true,
+            "destacado": false
         }
     ],
-    "actualizado": 1791793273552,
+    "actualizado": 1791793385409,
     "version": 1
 }
