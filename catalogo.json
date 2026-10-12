@@ -11,6 +11,17 @@
     },
     "productos": [
         {
+            "id": 2,
+            "nombre": "ajo degranado",
+            "descripcion": "¿Tienes carnicería o preparas productos para la venta? Nuestro ajo degranado es ideal para moler, elaborar marinados, adobos, chorizos, longanizas, salsas y preparados de carne.",
+            "precio": 50.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p2_60c58c20.jpg?v=60c58c20",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 1,
             "nombre": "ajo pelado",
             "descripcion": "Ajo pelado fresco y listo para usar, ideal para cocinas económicas, restaurantes, carnicerías y negocios de alimentos. Ahorra tiempo en limpieza y preparación, con la practicidad de tener el ajo listo para trabajar al momento. Calidad y comodidad para tu negocio. ¡Listo para cocinar!",
@@ -22,6 +33,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791777257702,
+    "actualizado": 1791777438210,
     "version": 1
 }
