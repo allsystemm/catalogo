@@ -124,7 +124,7 @@
             "id": 7,
             "nombre": "chile teja",
             "descripcion": "Chile seco de sabor intenso y característico, ideal para preparar salsas, adobos, guisos y diferentes recetas de la cocina mexicana. Excelente opción para cocinas, restaurantes, taquerías y negocios de alimentos.",
-            "precio": 0.0,
+            "precio": 140.0,
             "unidad": "kg",
             "categoria": "Chiles secos",
             "imagen": "productos/p7_57efcdab.jpg?v=57efcdab",
@@ -132,6 +132,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791780494234,
+    "actualizado": 1791782579400,
     "version": 1
 }
