@@ -34,6 +34,17 @@
             "destacado": false
         },
         {
+            "id": 5,
+            "nombre": "ajo negro",
+            "descripcion": "El ajo negro se obtiene mediante un proceso de maduración controlada que transforma el ajo tradicional en un producto de color negro, textura suave y sabor dulce, con notas balsámicas.\n🌿 Beneficios del ajo negro: ✅ Contiene compuestos antioxidantes. ✅ Aporta compuestos azufrados derivados del ajo. ✅ Puede contribuir a una alimentación saludable. ✅ Su sabor suave lo hace ideal para incluirlo en diferentes platillos.",
+            "precio": 60.0,
+            "unidad": "pieza",
+            "categoria": "Ajos",
+            "imagen": "productos/p5_6a3e1d8b.jpg?v=6a3e1d8b",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 3,
             "nombre": "ajo número chicos",
             "descripcion": "¿Buscas ajo rendidor y a buen precio para tu negocio? Tenemos ajo cerrado de números chicos, ideal para negocios que buscan economía y abastecimiento para su venta diaria.",
@@ -56,6 +67,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791792933656,
+    "actualizado": 1791793089376,
     "version": 1
 }
