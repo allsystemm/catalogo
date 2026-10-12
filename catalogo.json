@@ -117,7 +117,7 @@
             "precio": 140.0,
             "unidad": "kg",
             "categoria": "Chiles secos",
-            "imagen": "productos/p8_57efcdab.jpg?v=57efcdab",
+            "imagen": "productos/p8_050dff2e.jpg?v=050dff2e",
             "disponible": true,
             "destacado": false
         },
@@ -133,6 +133,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791849239232,
+    "actualizado": 1791849265102,
     "version": 1
 }
