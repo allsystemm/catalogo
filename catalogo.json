@@ -110,17 +110,6 @@
             "destacado": false
         },
         {
-            "id": 8,
-            "nombre": "Jamaica nigeriana",
-            "descripcion": "Flor de jamaica seca, ideal para preparar aguas frescas, infusiones y bebidas refrescantes. Excelente opción para negocios de jugos, restaurantes, cocinas y comerciantes que buscan surtir productos de calidad.",
-            "precio": 120.0,
-            "unidad": "kg",
-            "categoria": "Ajos",
-            "imagen": "productos/p8_e4708872.jpg?v=e4708872",
-            "disponible": true,
-            "destacado": false
-        },
-        {
             "id": 12,
             "nombre": "jamaica nigeriana",
             "descripcion": "Flor de jamaica seca, ideal para preparar aguas frescas, infusiones y bebidas refrescantes. Excelente opción para negocios de jugos, restaurantes, cocinas y comerciantes que buscan surtir productos de calidad.",
@@ -154,6 +143,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791793645018,
+    "actualizado": 1791793672356,
     "version": 1
 }
