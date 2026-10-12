@@ -55,6 +55,17 @@
             "destacado": false
         },
         {
+            "id": 10,
+            "nombre": "chile mora",
+            "descripcion": "Chile seco de sabor intenso, aroma característico y picor agradable. Ideal para preparar salsas, adobos, moles y una gran variedad de recetas tradicionales mexicanas.",
+            "precio": 140.0,
+            "unidad": "kg",
+            "categoria": "Chiles secos",
+            "imagen": "productos/p10_7d4a8d96.jpg?v=7d4a8d96",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 9,
             "nombre": "chile morita",
             "descripcion": "Chile seco de color rojo oscuro, sabor ahumado y picor característico. Ideal para preparar salsas, adobos, moles y deliciosos platillos mexicanos.",
@@ -110,6 +121,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791779497712,
+    "actualizado": 1791779652689,
     "version": 1
 }
