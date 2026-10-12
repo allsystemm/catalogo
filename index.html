@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1B5E20">
+<meta name="description" content="Catálogo de ajos y chiles secos. Consulta precios, fotos y aparta tu pedido por WhatsApp.">
+<title>Catálogo · El Jerezano</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧄</text></svg>">
+<style>
+  :root{
+    --verde:#1B5E20;
+    --verde-2:#2E7D32;
+    --verde-claro:#E8F5E9;
+    --rojo:#B3261E;
+    --rojo-claro:#FDECEA;
+    --crema:#FFFBF5;
+    --texto:#1D1B16;
+    --texto-2:#6B6459;
+    --linea:#E7DED1;
+    --blanco:#fff;
+    --sombra:0 2px 10px rgba(28,25,20,.08);
+    --sombra-2:0 10px 30px rgba(28,25,20,.16);
+    --radio:18px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--crema); color:var(--texto);
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:96px;
+  }
+  img{display:block;max-width:100%}
+  button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+  /* ---------- Encabezado ---------- */
+  header.hero{
+    background:linear-gradient(160deg,var(--verde) 0%,var(--verde-2) 60%,#3E8E41 100%);
+    color:#fff; padding:22px 18px 26px; border-radius:0 0 26px 26px;
+    box-shadow:var(--sombra-2); position:relative; overflow:hidden;
+  }
+  header.hero::after{
+    content:""; position:absolute; right:-40px; top:-40px; width:170px; height:170px;
+    background:rgba(255,255,255,.08); border-radius:50%;
+  }
+  .marca{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
+  .logo{
+    width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.16);
+    display:grid;place-items:center;font-size:26px;flex:0 0 auto;
+    border:1px solid rgba(255,255,255,.25);
+  }
+  .marca h1{margin:0;font-size:1.32rem;line-height:1.15;letter-spacing:-.3px}
+  .eslogan{margin:12px 0 0;font-size:.95rem;opacity:.94;line-height:1.4;position:relative;z-index:1}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1}
+  .chip-meta{
+    background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.22);
+    padding:6px 11px;border-radius:999px;font-size:.78rem;display:inline-flex;gap:6px;align-items:center;
+  }
+  .cta-wa{
+    margin-top:16px;display:flex;align-items:center;justify-content:center;gap:10px;
+    background:#25D366;color:#08331a;font-weight:800;text-decoration:none;
+    padding:14px 18px;border-radius:15px;font-size:1rem;position:relative;z-index:1;
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+  }
+  .cta-wa:active{transform:scale(.985)}
+
+  /* ---------- Barra de búsqueda ---------- */
+  .barra{
+    position:sticky; top:0; z-index:40; background:rgba(255,251,245,.94);
+    backdrop-filter:saturate(160%) blur(10px);
+    border-bottom:1px solid var(--linea); padding:10px 14px 8px;
+  }
+  .buscador{position:relative}
+  .buscador input{
+    width:100%;padding:13px 42px 13px 42px;border-radius:14px;border:1px solid var(--linea);
+    background:var(--blanco);font-size:1rem;color:var(--texto);outline:none;
+  }
+  .buscador input:focus{border-color:var(--verde-2);box-shadow:0 0 0 3px rgba(46,125,50,.14)}
+  .buscador .ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.45;font-size:1rem}
+  .buscador .limpiar{position:absolute;right:8px;top:50%;transform:translateY(-50%);padding:8px;opacity:.5;font-size:1rem}
+  .chips{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;padding:8px 14px;border-radius:999px;background:var(--blanco);
+    border:1px solid var(--linea);font-size:.85rem;font-weight:600;color:var(--texto-2);white-space:nowrap;
+  }
+  .chip.activo{background:var(--verde);border-color:var(--verde);color:#fff}
+
+  /* ---------- Cuadrícula ---------- */
+  main{padding:14px}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  @media(min-width:620px){.grid{grid-template-columns:repeat(3,1fr)}}
+  @media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr)};main{max-width:1100px;margin:0 auto}}
+
+  .card{
+    background:var(--blanco);border-radius:var(--radio);overflow:hidden;
+    box-shadow:var(--sombra);border:1px solid rgba(231,222,209,.7);
+    display:flex;flex-direction:column;position:relative;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:active{transform:scale(.985)}
+  .foto{position:relative;aspect-ratio:1/1;background:linear-gradient(135deg,#F3EDE3,#E9E1D3);overflow:hidden}
+  .foto img{width:100%;height:100%;object-fit:cover}
+  .foto .sin-foto{
+    position:absolute;inset:0;display:grid;place-items:center;color:#A79E8E;font-size:.75rem;
+    flex-direction:column;gap:4px;text-align:center;padding:8px;
+  }
+  .foto .sin-foto span:first-child{font-size:1.7rem;opacity:.5}
+  .etiqueta{
+    position:absolute;top:8px;left:8px;background:var(--rojo);color:#fff;
+    font-size:.62rem;font-weight:800;letter-spacing:.4px;padding:4px 8px;border-radius:7px;
+  }
+  .agotado{
+    position:absolute;inset:0;background:rgba(20,18,14,.55);display:grid;place-items:center;
+    color:#fff;font-weight:800;letter-spacing:1px;font-size:.85rem;
+  }
+  .info{padding:10px 11px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+  .nombre{font-size:.88rem;font-weight:700;line-height:1.25;margin:0;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.2em}
+  .desc{font-size:.72rem;color:var(--texto-2);margin:0;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .pie{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:6px;padding-top:6px}
+  .precio{font-size:1.06rem;font-weight:800;color:var(--verde);line-height:1.1}
+  .unidad{font-size:.68rem;color:var(--texto-2)}
+  .mas{
+    width:36px;height:36px;border-radius:11px;background:var(--verde-claro);color:var(--verde);
+    font-size:1.35rem;font-weight:700;display:grid;place-items:center;flex:0 0 auto;line-height:1;
+  }
+  .mas:active{background:#C8E6C9}
+  .cant{
+    position:absolute;top:-6px;right:-6px;background:var(--rojo);color:#fff;border-radius:999px;
+    min-width:20px;height:20px;font-size:.68rem;font-weight:800;display:grid;place-items:center;padding:0 5px;
+  }
+  .contenedor-mas{position:relative}
+
+  /* ---------- Estados ---------- */
+  .aviso{
+    text-align:center;padding:56px 24px;color:var(--texto-2);
+  }
+  .aviso .emoji{font-size:2.6rem;display:block;margin-bottom:12px}
+  .aviso strong{display:block;color:var(--texto);font-size:1.05rem;margin-bottom:6px}
+  .skeleton{background:var(--blanco);border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra)}
+  .skeleton .sk-foto{aspect-ratio:1/1;background:linear-gradient(90deg,#F1EAE0 25%,#E7DED1 37%,#F1EAE0 63%);background-size:400% 100%;animation:brillo 1.3s infinite}
+  .skeleton .sk-linea{height:12px;margin:10px;border-radius:6px;background:#F1EAE0}
+  .skeleton .sk-linea.corta{width:55%}
+  @keyframes brillo{0%{background-position:100% 50%}100%{background-position:0 50%}}
+
+  /* ---------- Pie ---------- */
+  footer{
+    margin:26px 14px 0;padding:20px;border-radius:var(--radio);background:var(--blanco);
+    border:1px solid var(--linea);color:var(--texto-2);font-size:.82rem;line-height:1.55;
+  }
+  footer strong{color:var(--texto)}
+  .sello{margin-top:12px;font-size:.72rem;opacity:.75}
+
+  /* ---------- Botón flotante del carrito ---------- */
+  .flotante{
+    position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:60;
+    background:var(--verde);color:#fff;border-radius:16px;padding:14px 20px;
+    display:none;align-items:center;gap:12px;box-shadow:var(--sombra-2);
+    max-width:calc(100% - 24px);
+  }
+  .flotante.visible{display:flex}
+  .flotante .txt{display:flex;flex-direction:column;align-items:flex-start;line-height:1.15}
+  .flotante .txt small{opacity:.85;font-size:.72rem}
+  .flotante .txt b{font-size:1rem}
+  .flotante .flecha{font-size:1.2rem}
+
+  /* ---------- Panel del carrito ---------- */
+  .velo{
+    position:fixed;inset:0;background:rgba(20,18,14,.5);z-index:70;opacity:0;pointer-events:none;
+    transition:opacity .2s ease;
+  }
+  .velo.visible{opacity:1;pointer-events:auto}
+  .panel{
+    position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--crema);
+    border-radius:26px 26px 0 0;max-height:88vh;display:flex;flex-direction:column;
+    transform:translateY(105%);transition:transform .26s cubic-bezier(.2,.8,.2,1);
+    box-shadow:0 -10px 40px rgba(0,0,0,.2);
+  }
+  .panel.visible{transform:translateY(0)}
+  @media(min-width:620px){
+    .panel{left:50%;transform:translate(-50%,105%);width:min(560px,94vw);border-radius:26px;bottom:14px}
+    .panel.visible{transform:translate(-50%,0)}
+  }
+  .panel-cab{display:flex;align-items:center;gap:10px;padding:16px 18px 10px}
+  .panel-cab h2{margin:0;font-size:1.15rem;flex:1}
+  .cerrar{font-size:1.5rem;line-height:1;padding:6px 10px;border-radius:12px;background:var(--blanco);border:1px solid var(--linea)}
+  .panel-cuerpo{overflow-y:auto;padding:0 18px;flex:1}
+  .linea{display:flex;align-items:center;gap:10px;padding:11px 0;border-bottom:1px solid var(--linea)}
+  .linea .mini{width:46px;height:46px;border-radius:11px;object-fit:cover;flex:0 0 auto;background:#EFE7DB}
+  .linea .datos{flex:1;min-width:0}
+  .linea .datos b{display:block;font-size:.86rem;line-height:1.2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .linea .datos small{color:var(--texto-2);font-size:.72rem}
+  .stepper{display:flex;align-items:center;gap:2px;background:var(--blanco);border:1px solid var(--linea);border-radius:11px;padding:2px}
+  .stepper button{width:30px;height:30px;font-size:1.05rem;font-weight:700;color:var(--verde);border-radius:8px}
+  .stepper button:active{background:var(--verde-claro)}
+  .stepper span{min-width:24px;text-align:center;font-weight:700;font-size:.88rem}
+  .linea .imp{font-weight:800;font-size:.88rem;min-width:64px;text-align:right}
+  .panel-pie{padding:14px 18px calc(18px + env(safe-area-inset-bottom));background:var(--blanco);border-top:1px solid var(--linea);border-radius:0 0 26px 26px}
+  .panel-datos{overflow-y:auto;padding:4px 18px 10px;border-top:1px solid var(--linea);max-height:36vh;flex:0 0 auto}
+  .panel-datos.oculto{display:none}
+  .total{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .total small{color:var(--texto-2);font-size:.76rem;display:block}
+  .total b{font-size:1.35rem;color:var(--verde)}
+  .btn-wa{
+    width:100%;background:#25D366;color:#08331a;font-weight:800;font-size:1.02rem;
+    padding:16px;border-radius:15px;display:flex;align-items:center;justify-content:center;gap:10px;
+  }
+  .btn-wa:active{transform:scale(.99)}
+  .btn-sec{
+    width:100%;margin-top:8px;padding:12px;border-radius:13px;border:1px solid var(--linea);
+    background:var(--blanco);font-weight:600;color:var(--texto-2);font-size:.9rem;
+  }
+  .campo{margin-top:12px}
+  .campo label{display:block;font-size:.78rem;font-weight:700;color:var(--texto-2);margin-bottom:5px}
+  .campo input,.campo textarea{
+    width:100%;padding:11px 12px;border-radius:12px;border:1px solid var(--linea);
+    background:var(--blanco);font-size:.92rem;font-family:inherit;outline:none;color:var(--texto);
+  }
+  .campo textarea{resize:vertical;min-height:56px}
+  .campo input:focus,.campo textarea:focus{border-color:var(--verde-2)}
+  .radio{display:flex;gap:8px}
+  .radio button{
+    flex:1;padding:11px;border-radius:12px;border:1px solid var(--linea);background:var(--blanco);
+    font-size:.86rem;font-weight:600;color:var(--texto-2);
+  }
+  .radio button.activo{background:var(--verde-claro);border-color:var(--verde-2);color:var(--verde);font-weight:800}
+
+  .toast{
+    position:fixed;bottom:96px;left:50%;transform:translate(-50%,20px);z-index:90;
+    background:#201D18;color:#fff;padding:12px 18px;border-radius:13px;font-size:.88rem;
+    opacity:0;pointer-events:none;transition:all .22s ease;max-width:88vw;text-align:center;
+  }
+  .toast.visible{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="marca">
+    <div class="logo">🧄</div>
+    <div>
+      <h1 id="negocio-nombre">Cargando catálogo…</h1>
+    </div>
+  </div>
+  <p class="eslogan" id="negocio-eslogan">Ajos y chiles secos de la mejor calidad</p>
+  <div class="meta" id="negocio-meta"></div>
+  <a class="cta-wa" id="cta-wa" href="#" target="_blank" rel="noopener">
+    <span>💬</span><span>Escribir por WhatsApp</span>
+  </a>
+</header>
+
+<div class="barra">
+  <div class="buscador">
+    <span class="ico">🔍</span>
+    <input id="buscar" type="search" placeholder="Buscar ajo, chile, producto…" autocomplete="off">
+    <button class="limpiar" id="limpiar" hidden aria-label="Limpiar">✕</button>
+  </div>
+  <div class="chips" id="chips"></div>
+</div>
+
+<main>
+  <div class="grid" id="grid"></div>
+  <div id="aviso"></div>
+</main>
+
+<footer>
+  <strong id="pie-negocio">El Jerezano</strong>
+  <div id="pie-notas"></div>
+  <div id="pie-contacto" style="margin-top:8px"></div>
+  <div class="sello" id="sello">Catálogo actualizado: —</div>
+</footer>
+
+<button class="flotante" id="flotante">
+  <span>🛒</span>
+  <span class="txt">
+    <small id="flotante-cant">0 artículos</small>
+    <b id="flotante-total">$0</b>
+  </span>
+  <span class="flecha">›</span>
+</button>
+
+<div class="velo" id="velo"></div>
+
+<div class="panel" id="panel">
+  <div class="panel-cab">
+    <h2>Tu pedido</h2>
+    <button class="cerrar" id="cerrar" aria-label="Cerrar">✕</button>
+  </div>
+  <div class="panel-cuerpo" id="panel-cuerpo"></div>
+
+  <div class="panel-datos" id="panel-datos">
+    <div class="campo">
+      <label for="campo-nombre">Tu nombre</label>
+      <input id="campo-nombre" type="text" placeholder="¿Cómo te llamas?" autocomplete="name">
+    </div>
+    <div class="campo">
+      <label>¿Cómo lo quieres?</label>
+      <div class="radio" id="radio-entrega">
+        <button type="button" data-entrega="Recoger en el local" class="activo">Recoger en el local</button>
+        <button type="button" data-entrega="Entrega a domicilio">Entrega a domicilio</button>
+      </div>
+    </div>
+    <div class="campo" id="caja-direccion" hidden>
+      <label for="campo-direccion">Dirección y referencias</label>
+      <input id="campo-direccion" type="text" placeholder="Calle, número, colonia">
+    </div>
+    <div class="campo">
+      <label for="campo-notas">Notas (opcional)</label>
+      <textarea id="campo-notas" placeholder="Ej. molido, sin semilla, entregar después de las 5…"></textarea>
+    </div>
+  </div>
+
+  <div class="panel-pie">
+    <div class="total">
+      <div><small>Total estimado</small><b id="panel-total">$0</b></div>
+      <button class="btn-sec" style="width:auto;margin:0;padding:9px 14px" id="vaciar">Vaciar</button>
+    </div>
+    <button class="btn-wa" id="enviar"><span>💬</span><span>Enviar pedido por WhatsApp</span></button>
+    <div style="margin-top:6px;font-size:.72rem;color:var(--texto-2);text-align:center">
+      El precio final se confirma en el chat. Sujeto a disponibilidad.
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var CLAVE_CARRITO = "eljerezano_carrito_v1";
+  var CLAVE_CLIENTE = "eljerezano_cliente_v1";
+
+  var estado = {
+    negocio: {nombre:"El Jerezano", slogan:"", ciudad:"", whatsapp:"", telefono:"", horario:"", notas:"", moneda:"MXN"},
+    productos: [],
+    actualizado: 0,
+    filtro: "Todas",
+    busqueda: "",
+    carrito: {},          // id -> cantidad
+    entrega: "Recoger en el local"
+  };
+
+  var $ = function(id){ return document.getElementById(id); };
+
+  function escapar(t){
+    return String(t == null ? "" : t)
+      .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+      .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+  }
+
+  function moneda(){
+    return (estado.negocio.moneda || "MXN").toUpperCase();
+  }
+
+  function simbolo(){
+    var m = moneda();
+    if (m === "MXN" || m === "MX" || m === "") return "$";
+    if (m === "USD") return "US$";
+    if (m === "EUR") return "€";
+    return m + " ";
+  }
+
+  function formatear(valor, sinCentavos){
+    var n = Number(valor) || 0;
+    var opciones = {minimumFractionDigits: (sinCentavos && n % 1 === 0) ? 0 : 2, maximumFractionDigits: 2};
+    try {
+      return simbolo() + n.toLocaleString("es-MX", opciones);
+    } catch(e){
+      return simbolo() + n.toFixed(2);
+    }
+  }
+
+  function fechaBonita(ms){
+    if (!ms) return "—";
+    try {
+      return new Date(ms).toLocaleDateString("es-MX", {day:"numeric", month:"long", year:"numeric"}) +
+             " a las " + new Date(ms).toLocaleTimeString("es-MX", {hour:"2-digit", minute:"2-digit"});
+    } catch(e){ return "—"; }
+  }
+
+  function cargarCarrito(){
+    try {
+      var crudo = localStorage.getItem(CLAVE_CARRITO);
+      estado.carrito = crudo ? JSON.parse(crudo) : {};
+      if (typeof estado.carrito !== "object" || estado.carrito === null) estado.carrito = {};
+    } catch(e){ estado.carrito = {}; }
+  }
+
+  function guardarCarrito(){
+    try { localStorage.setItem(CLAVE_CARRITO, JSON.stringify(estado.carrito)); } catch(e){}
+  }
+
+  function productoPorId(id){
+    for (var i = 0; i < estado.productos.length; i++){
+      if (String(estado.productos[i].id) === String(id)) return estado.productos[i];
+    }
+    return null;
+  }
+
+  function cantidadDe(id){ return Number(estado.carrito[id]) || 0; }
+
+  function cambiarCantidad(id, delta){
+    var actual = cantidadDe(id);
+    var nuevo = actual + delta;
+    if (nuevo <= 0) delete estado.carrito[id];
+    else estado.carrito[id] = nuevo;
+    guardarCarrito();
+    pintar();
+    pintarPanel();
+    pintarFlotante();
+  }
+
+  function fijarCantidad(id, valor){
+    if (valor <= 0) delete estado.carrito[id];
+    else estado.carrito[id] = valor;
+    guardarCarrito();
+    pintar();
+    pintarPanel();
+    pintarFlotante();
+  }
+
+  function totalArticulos(){
+    var t = 0;
+    for (var k in estado.carrito) if (estado.carrito.hasOwnProperty(k)) t += Number(estado.carrito[k]) || 0;
+    return t;
+  }
+
+  function totalDinero(){
+    var t = 0;
+    for (var k in estado.carrito){
+      if (!estado.carrito.hasOwnProperty(k)) continue;
+      var p = productoPorId(k);
+      if (p) t += (Number(p.precio) || 0) * (Number(estado.carrito[k]) || 0);
+    }
+    return t;
+  }
+
+  function visibles(){
+    var q = estado.busqueda.trim().toLowerCase();
+    return estado.productos.filter(function(p){
+      var okCat = estado.filtro === "Todas" || String(p.categoria || "").toLowerCase() === estado.filtro.toLowerCase();
+      if (!okCat) return false;
+      if (!q) return true;
+      return (String(p.nombre || "").toLowerCase().indexOf(q) >= 0) ||
+             (String(p.descripcion || "").toLowerCase().indexOf(q) >= 0) ||
+             (String(p.categoria || "").toLowerCase().indexOf(q) >= 0);
+    });
+  }
+
+  /* ---------------- Pintado ---------------- */
+
+  function pintarEncabezado(){
+    var n = estado.negocio;
+    $("negocio-nombre").textContent = n.nombre || "Catálogo";
+    document.title = "Catálogo · " + (n.nombre || "El Jerezano");
+    $("negocio-eslogan").textContent = n.slogan || "";
+    $("negocio-eslogan").style.display = n.slogan ? "" : "none";
+
+    var meta = [];
+    if (n.ciudad) meta.push("📍 " + escapar(n.ciudad));
+    if (n.horario) meta.push("🕘 " + escapar(n.horario));
+    $("negocio-meta").innerHTML = meta.map(function(m){
+      return '<span class="chip-meta">' + m + "</span>";
+    }).join("");
+
+    var numero = (n.whatsapp || "").replace(/\D/g, "");
+    var texto = encodeURIComponent("Hola, vengo del catálogo de " + (n.nombre || "El Jerezano") + ". ¿Me apoya con información?");
+    $("cta-wa").href = numero ? ("https://wa.me/" + numero + "?text=" + texto) : "#";
+    if (!numero) $("cta-wa").style.display = "none";
+
+    $("pie-negocio").textContent = n.nombre || "El Jerezano";
+    $("pie-notas").textContent = n.notas || "";
+    $("pie-contacto").innerHTML =
+      (n.telefono ? "WhatsApp / Teléfono: <strong>" + escapar(n.telefono) + "</strong><br>" : "") +
+      (n.ciudad ? escapar(n.ciudad) : "");
+    $("sello").textContent = "Catálogo actualizado: " + fechaBonita(estado.actualizado);
+  }
+
+  function pintarChips(){
+    var conteo = {};
+    estado.productos.forEach(function(p){
+      var c = p.categoria || "Otros";
+      conteo[c] = (conteo[c] || 0) + 1;
+    });
+    var cats = Object.keys(conteo).sort();
+    if (cats.length < 2){ $("chips").innerHTML = ""; return; }
+
+    var html = '<button class="chip' + (estado.filtro === "Todas" ? " activo" : "") + '" data-cat="Todas">Todo (' + estado.productos.length + ")</button>";
+    cats.forEach(function(c){
+      html += '<button class="chip' + (estado.filtro === c ? " activo" : "") + '" data-cat="' + escapar(c) + '">' +
+              escapar(c) + " (" + conteo[c] + ")</button>";
+    });
+    $("chips").innerHTML = html;
+
+    Array.prototype.forEach.call($("chips").querySelectorAll(".chip"), function(boton){
+      boton.addEventListener("click", function(){
+        estado.filtro = boton.getAttribute("data-cat");
+        pintarChips();
+        pintar();
+      });
+    });
+  }
+
+  function htmlFoto(p){
+    if (p.imagen){
+      return '<div class="foto"><img loading="lazy" src="' + escapar(p.imagen) + '" alt="' + escapar(p.nombre) + '" ' +
+             'onerror="this.parentNode.innerHTML=\'<div class=&quot;sin-foto&quot;><span>🧄</span><span>Sin foto</span></div>\'">' +
+             (p.destacado ? '<span class="etiqueta">DESTACADO</span>' : "") +
+             (!p.disponible ? '<div class="agotado">AGOTADO</div>' : "") + "</div>";
+    }
+    return '<div class="foto"><div class="sin-foto"><span>🧄</span><span>Sin foto</span></div>' +
+           (p.destacado ? '<span class="etiqueta">DESTACADO</span>' : "") +
+           (!p.disponible ? '<div class="agotado">AGOTADO</div>' : "") + "</div>";
+  }
+
+  function pintar(){
+    var lista = visibles();
+    var grid = $("grid");
+    var aviso = $("aviso");
+
+    if (!lista.length){
+      grid.innerHTML = "";
+      aviso.innerHTML =
+        '<div class="aviso"><span class="emoji">' + (estado.productos.length ? "🔍" : "🧄") + "</span>" +
+        "<strong>" + (estado.productos.length ? "Sin resultados" : "Catálogo en preparación") + "</strong>" +
+        (estado.productos.length
+          ? "No encontramos productos con esa búsqueda. Prueba con otra palabra."
+          : "Muy pronto vas a poder ver aquí nuestros ajos y chiles secos con precios actualizados.") +
+        "</div>";
+      return;
+    }
+    aviso.innerHTML = "";
+
+    grid.innerHTML = lista.map(function(p){
+      var cant = cantidadDe(p.id);
+      return '<article class="card" data-id="' + escapar(p.id) + '">' +
+        htmlFoto(p) +
+        '<div class="info">' +
+          '<h3 class="nombre">' + escapar(p.nombre) + "</h3>" +
+          (p.descripcion ? '<p class="desc">' + escapar(p.descripcion) + "</p>" : "") +
+          '<div class="pie">' +
+            "<div>" +
+              '<div class="precio">' + formatear(p.precio, true) + "</div>" +
+              '<div class="unidad">por ' + escapar(p.unidad || "kg") + "</div>" +
+            "</div>" +
+            (p.disponible
+              ? '<div class="contenedor-mas"><button class="mas" data-agregar="' + escapar(p.id) + '" aria-label="Agregar">+</button>' +
+                (cant ? '<span class="cant">' + cant + "</span>" : "") + "</div>"
+              : "") +
+          "</div>" +
+        "</div>" +
+      "</article>";
+    }).join("");
+
+    Array.prototype.forEach.call(grid.querySelectorAll("[data-agregar]"), function(boton){
+      boton.addEventListener("click", function(ev){
+        ev.stopPropagation();
+        var id = boton.getAttribute("data-agregar");
+        cambiarCantidad(id, 1);
+        avisar("Agregado a tu pedido");
+      });
+    });
+
+    Array.prototype.forEach.call(grid.querySelectorAll(".card"), function(tarjeta){
+      tarjeta.addEventListener("click", function(){
+        var p = productoPorId(tarjeta.getAttribute("data-id"));
+        if (p && p.disponible) {
+          cambiarCantidad(p.id, 1);
+          avisar("Agregado a tu pedido");
+        }
+      });
+    });
+  }
+
+  function pintarFlotante(){
+    var n = totalArticulos();
+    var boton = $("flotante");
+    if (n > 0){
+      boton.classList.add("visible");
+      $("flotante-cant").textContent = n + (n === 1 ? " artículo" : " artículos");
+      $("flotante-total").textContent = formatear(totalDinero(), false);
+    } else {
+      boton.classList.remove("visible");
+    }
+  }
+
+  function pintarPanel(){
+    var cuerpo = $("panel-cuerpo");
+    var claves = Object.keys(estado.carrito);
+
+    if (!claves.length){
+      cuerpo.innerHTML = '<div class="aviso" style="padding:36px 10px"><span class="emoji">🛒</span><strong>Tu pedido está vacío</strong>Agrega productos con el botón + del catálogo.</div>';
+    } else {
+      cuerpo.innerHTML = claves.map(function(id){
+        var p = productoPorId(id);
+        if (!p) return "";
+        var cant = cantidadDe(id);
+        var mini = p.imagen
+          ? '<img class="mini" src="' + escapar(p.imagen) + '" alt="">'
+          : '<div class="mini"></div>';
+        return '<div class="linea">' + mini +
+          '<div class="datos"><b>' + escapar(p.nombre) + "</b>" +
+          "<small>" + formatear(p.precio, true) + " / " + escapar(p.unidad || "kg") + "</small></div>" +
+          '<div class="stepper">' +
+            '<button data-menos="' + escapar(id) + '" aria-label="Quitar uno">−</button>' +
+            "<span>" + cant + "</span>" +
+            '<button data-mas="' + escapar(id) + '" aria-label="Agregar uno">+</button>' +
+          "</div>" +
+          '<div class="imp">' + formatear((Number(p.precio) || 0) * cant, false) + "</div>" +
+        "</div>";
+      }).join("");
+    }
+
+    $("panel-total").textContent = formatear(totalDinero(), false);
+    $("enviar").disabled = claves.length === 0;
+    $("enviar").style.opacity = claves.length === 0 ? ".5" : "1";
+    $("panel-datos").classList.toggle("oculto", claves.length === 0);
+
+    Array.prototype.forEach.call(cuerpo.querySelectorAll("[data-mas]"), function(b){
+      b.addEventListener("click", function(){ cambiarCantidad(b.getAttribute("data-mas"), 1); });
+    });
+    Array.prototype.forEach.call(cuerpo.querySelectorAll("[data-menos]"), function(b){
+      b.addEventListener("click", function(){ cambiarCantidad(b.getAttribute("data-menos"), -1); });
+    });
+  }
+
+  function abrirPanel(){
+    $("velo").classList.add("visible");
+    $("panel").classList.add("visible");
+  }
+
+  function cerrarPanel(){
+    $("velo").classList.remove("visible");
+    $("panel").classList.remove("visible");
+  }
+
+  var temporizador;
+  function avisar(texto){
+    var t = $("toast");
+    t.textContent = texto;
+    t.classList.add("visible");
+    clearTimeout(temporizador);
+    temporizador = setTimeout(function(){ t.classList.remove("visible"); }, 1900);
+  }
+
+  /* ---------------- Pedido por WhatsApp ---------------- */
+
+  function construirPedido(){
+    var n = estado.negocio;
+    var lineas = ["*NUEVO PEDIDO — " + (n.nombre || "Catálogo") + "*", "────────────────────"];
+    var total = 0;
+    var i = 1;
+    Object.keys(estado.carrito).forEach(function(id){
+      var p = productoPorId(id);
+      if (!p) return;
+      var cant = cantidadDe(id);
+      var sub = (Number(p.precio) || 0) * cant;
+      total += sub;
+      lineas.push(i + ") *" + p.nombre + "*");
+      lineas.push("   " + cant + " " + (p.unidad || "kg") + " × " + formatear(p.precio, true) + " = " + formatear(sub, false));
+      i++;
+    });
+    lineas.push("────────────────────");
+    lineas.push("*Total estimado: " + formatear(total, false) + "*");
+    lineas.push("");
+
+    var nombre = ($("campo-nombre") && $("campo-nombre").value.trim()) || "";
+    var entrega = estado.entrega || "Recoger en el local";
+    var direccion = ($("campo-direccion") && $("campo-direccion").value.trim()) || "";
+    var notas = ($("campo-notas") && $("campo-notas").value.trim()) || "";
+
+    lineas.push("Nombre: " + nombre);
+    lineas.push("Entrega: " + entrega);
+    if (direccion) lineas.push("Dirección: " + direccion);
+    if (notas) lineas.push("Notas: " + notas);
+    return lineas.join("\n");
+  }
+
+  function enviarPedido(){
+    var n = estado.negocio;
+    var numero = (n.whatsapp || "").replace(/\D/g, "");
+    if (!numero){ avisar("Falta configurar el número de WhatsApp."); return; }
+    if (totalArticulos() === 0){ avisar("Agrega productos a tu pedido."); return; }
+    var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(construirPedido());
+    window.open(url, "_blank");
+  }
+
+  /* ---------------- Datos ---------------- */
+
+  function esqueletos(){
+    var html = "";
+    for (var i = 0; i < 6; i++){
+      html += '<div class="skeleton"><div class="sk-foto"></div><div class="sk-linea"></div><div class="sk-linea corta"></div></div>';
+    }
+    $("grid").innerHTML = html;
+  }
+
+  function cargar(){
+    esqueletos();
+    fetch("catalogo.json?t=" + Date.now(), {cache:"no-store"})
+      .then(function(r){
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function(datos){
+        estado.negocio = Object.assign(estado.negocio, datos.negocio || {});
+        estado.productos = Array.isArray(datos.productos) ? datos.productos : [];
+        estado.actualizado = datos.actualizado || 0;
+        pintarEncabezado();
+        pintarChips();
+        pintar();
+        pintarPanel();
+        pintarFlotante();
+      })
+      .catch(function(err){
+        $("grid").innerHTML = "";
+        $("aviso").innerHTML =
+          '<div class="aviso"><span class="emoji">📡</span><strong>No se pudo cargar el catálogo</strong>' +
+          "Revisa tu conexión a internet y vuelve a intentar.<br><br>" +
+          '<button class="btn-sec" style="max-width:220px;margin:0 auto" onclick="location.reload()">Volver a intentar</button>' +
+          "</div>";
+        console.error(err);
+      });
+  }
+
+  /* ---------------- Eventos ---------------- */
+
+  $("buscar").addEventListener("input", function(ev){
+    estado.busqueda = ev.target.value || "";
+    $("limpiar").hidden = !estado.busqueda;
+    pintar();
+  });
+
+  $("limpiar").addEventListener("click", function(){
+    $("buscar").value = "";
+    estado.busqueda = "";
+    $("limpiar").hidden = true;
+    pintar();
+  });
+
+  $("flotante").addEventListener("click", abrirPanel);
+  $("cerrar").addEventListener("click", cerrarPanel);
+  $("velo").addEventListener("click", cerrarPanel);
+  $("enviar").addEventListener("click", enviarPedido);
+  $("vaciar").addEventListener("click", function(){
+    estado.carrito = {};
+    guardarCarrito();
+    pintar(); pintarPanel(); pintarFlotante();
+    avisar("Pedido vaciado");
+  });
+
+  document.addEventListener("keydown", function(ev){
+    if (ev.key === "Escape") cerrarPanel();
+  });
+
+  /* ---- Datos del cliente (se recuerdan en el teléfono) ---- */
+  function cargarCliente(){
+    var datos = {};
+    try { datos = JSON.parse(localStorage.getItem(CLAVE_CLIENTE) || "{}") || {}; } catch(e){ datos = {}; }
+    if (datos.nombre) $("campo-nombre").value = datos.nombre;
+    if (datos.direccion) $("campo-direccion").value = datos.direccion;
+    if (datos.notas) $("campo-notas").value = datos.notas;
+    estado.entrega = datos.entrega || "Recoger en el local";
+    aplicarEntrega();
+  }
+
+  function guardarCliente(){
+    try {
+      localStorage.setItem(CLAVE_CLIENTE, JSON.stringify({
+        nombre: $("campo-nombre").value,
+        direccion: $("campo-direccion").value,
+        notas: $("campo-notas").value,
+        entrega: estado.entrega || "Recoger en el local"
+      }));
+    } catch(e){}
+  }
+
+  function aplicarEntrega(){
+    var domicilio = (estado.entrega || "").indexOf("domicilio") >= 0;
+    $("caja-direccion").hidden = !domicilio;
+    Array.prototype.forEach.call($("radio-entrega").querySelectorAll("button"), function(b){
+      b.classList.toggle("activo", b.getAttribute("data-entrega") === estado.entrega);
+    });
+  }
+
+  Array.prototype.forEach.call($("radio-entrega").querySelectorAll("button"), function(b){
+    b.addEventListener("click", function(){
+      estado.entrega = b.getAttribute("data-entrega");
+      aplicarEntrega();
+      guardarCliente();
+    });
+  });
+
+  ["campo-nombre", "campo-direccion", "campo-notas"].forEach(function(id){
+    $(id).addEventListener("input", guardarCliente);
+  });
+
+  cargarCarrito();
+  cargarCliente();
+  cargar();
+})();
+</script>
+</body>
+</html>
