@@ -65,8 +65,19 @@
             "imagen": "productos/p1_8e64260f.jpg?v=8e64260f",
             "disponible": true,
             "destacado": false
+        },
+        {
+            "id": 6,
+            "nombre": "ajos número gandes",
+            "descripcion": "¿Buscas ajo grande y de calidad para tu negocio? En El Jerezano tenemos ajo cerrado de número grande, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan ofrecer un producto de excelente presentación.\n✅ Ajo de buen tamaño y calidad. ✅ Excelente presentación para la venta. ✅ Ideal para reventa y distribución. ✅ Precios especiales para compras de mayoreo.",
+            "precio": 100.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p6_f6177dd9.jpg?v=f6177dd9",
+            "disponible": true,
+            "destacado": false
         }
     ],
-    "actualizado": 1791793089376,
+    "actualizado": 1791793196702,
     "version": 1
 }
