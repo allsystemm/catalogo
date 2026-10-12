@@ -42,8 +42,19 @@
             "imagen": "productos/p1_8e64260f.jpg?v=8e64260f",
             "disponible": true,
             "destacado": false
+        },
+        {
+            "id": 4,
+            "nombre": "Coronas",
+            "descripcion": "¿Buscas ajos de calidad para surtir tu negocio? En El Jerezano tenemos ajo en corona, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan un producto de calidad para sus clientes.",
+            "precio": 80.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p4_75dc1c7c.jpg?v=75dc1c7c",
+            "disponible": true,
+            "destacado": false
         }
     ],
-    "actualizado": 1791778078172,
+    "actualizado": 1791778188210,
     "version": 1
 }
