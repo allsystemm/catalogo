@@ -66,6 +66,17 @@
             "destacado": false
         },
         {
+            "id": 8,
+            "nombre": "Jamaica nigeriana",
+            "descripcion": "Flor de jamaica seca, ideal para preparar aguas frescas, infusiones y bebidas refrescantes. Excelente opción para negocios de jugos, restaurantes, cocinas y comerciantes que buscan surtir productos de calidad.",
+            "precio": 120.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p8_e4708872.jpg?v=e4708872",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 6,
             "nombre": "Chile guajillo",
             "descripcion": "Chile seco de color rojo intenso, sabor característico y picor moderado. Ideal para preparar salsas, adobos, moles, marinados y una gran variedad de platillos mexicanos.",
@@ -88,6 +99,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791779095988,
+    "actualizado": 1791779214163,
     "version": 1
 }
