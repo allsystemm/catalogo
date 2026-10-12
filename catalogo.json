@@ -1,0 +1,27 @@
+{
+    "negocio": {
+        "nombre": "El Jerezano",
+        "slogan": "Ajos y chiles secos de la mejor calidad",
+        "ciudad": "México",
+        "whatsapp": "525574335367",
+        "telefono": "55 7433 5367",
+        "horario": "Lunes a sábado de 9:00 a 19:00",
+        "notas": "Precios sujetos a cambio sin previo aviso. Aparta tu pedido por WhatsApp.",
+        "moneda": "MXN"
+    },
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "ajo pelado",
+            "descripcion": "Ajo pelado fresco y listo para usar, ideal para cocinas económicas, restaurantes, carnicerías y negocios de alimentos. Ahorra tiempo en limpieza y preparación, con la practicidad de tener el ajo listo para trabajar al momento. Calidad y comodidad para tu negocio. ¡Listo para cocinar!",
+            "precio": 80.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p1_8e64260f.jpg?v=8e64260f",
+            "disponible": true,
+            "destacado": false
+        }
+    ],
+    "actualizado": 1791777257702,
+    "version": 1
+}
