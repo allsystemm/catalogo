@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#1B5E20">
 <meta name="description" content="Catálogo de ajos y chiles secos. Consulta precios, fotos y aparta tu pedido por WhatsApp.">
 <title>Catálogo · El Jerezano</title>
-<link rel="icon" type="image/png" href="garlic.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧄</text></svg>">
 <style>
   :root{
     --verde:#1B5E20;
@@ -46,11 +46,10 @@
   }
   .marca{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
   .logo{
-    width:66px;height:66px;border-radius:17px;background:#fff;flex:0 0 auto;
-    display:grid;place-items:center;overflow:hidden;padding:5px;
-    box-shadow:0 6px 18px rgba(0,0,0,.22);
+    width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.16);
+    display:grid;place-items:center;font-size:26px;flex:0 0 auto;
+    border:1px solid rgba(255,255,255,.25);
   }
-  .logo img{width:100%;height:100%;object-fit:contain}
   .marca h1{margin:0;font-size:1.32rem;line-height:1.15;letter-spacing:-.3px}
   .eslogan{margin:12px 0 0;font-size:.95rem;opacity:.94;line-height:1.4;position:relative;z-index:1}
   .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative;z-index:1}
@@ -134,7 +133,6 @@
     min-width:20px;height:20px;font-size:.68rem;font-weight:800;display:grid;place-items:center;padding:0 5px;
   }
   .contenedor-mas{position:relative}
-  .pista-tarjeta{font-size:.66rem;color:var(--texto-2);opacity:.8;margin-top:2px}
 
   /* ---------- Estados ---------- */
   .aviso{
@@ -147,24 +145,6 @@
   .skeleton .sk-linea{height:12px;margin:10px;border-radius:6px;background:#F1EAE0}
   .skeleton .sk-linea.corta{width:55%}
   @keyframes brillo{0%{background-position:100% 50%}100%{background-position:0 50%}}
-
-  /* ---------- Ficha del producto ---------- */
-  .detalle-foto{position:relative;aspect-ratio:1/1;border-radius:16px;overflow:hidden;
-    background:linear-gradient(135deg,#F3EDE3,#E9E1D3);margin-bottom:14px}
-  .detalle-foto img{width:100%;height:100%;object-fit:cover}
-  .detalle-foto .sin-foto{position:absolute;inset:0;display:grid;place-items:center;
-    color:#A79E8E;font-size:.8rem;text-align:center;padding:8px}
-  .detalle-foto .sin-foto span:first-child{font-size:2.2rem;opacity:.5}
-  .detalle-nombre{font-size:1.2rem;font-weight:800;margin:0 0 8px;line-height:1.25}
-  .detalle-precio{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
-  .precio-grande{font-size:1.65rem;font-weight:800;color:var(--verde);line-height:1}
-  .detalle-desc{font-size:.92rem;line-height:1.55;margin:0 0 16px;color:var(--texto)}
-  .detalle-cant{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
-    padding:12px;border-radius:14px;background:var(--blanco);border:1px solid var(--linea)}
-  .detalle-cant > span{font-size:.85rem;font-weight:700;color:var(--texto-2)}
-  .detalle-cant b{margin-left:auto;font-size:1.1rem;color:var(--verde)}
-  .aviso-agotado{color:var(--rojo);font-weight:800;font-size:.86rem;margin:12px 0 0}
-  .pista{font-size:.72rem;color:var(--texto-2);text-align:center;margin-top:10px}
 
   /* ---------- Pie ---------- */
   footer{
@@ -260,7 +240,7 @@
 
 <header class="hero">
   <div class="marca">
-    <div class="logo"><img id="negocio-logo" src="logo.png" alt="Logotipo del negocio"></div>
+    <div class="logo">🧄</div>
     <div>
       <h1 id="negocio-nombre">Cargando catálogo…</h1>
     </div>
@@ -345,21 +325,6 @@
   </div>
 </div>
 
-<div class="velo" id="velo-detalle"></div>
-
-<div class="panel" id="panel-detalle">
-  <div class="panel-cab">
-    <h2 id="detalle-categoria">Producto</h2>
-    <button class="cerrar" id="cerrar-detalle" aria-label="Cerrar">✕</button>
-  </div>
-  <div class="panel-cuerpo" id="detalle-cuerpo"></div>
-  <div class="panel-pie">
-    <button class="btn-wa" id="detalle-agregar"><span>🛒</span><span>Agregar a mi pedido</span></button>
-    <button class="btn-sec" id="detalle-pedir" style="margin-top:8px">Pedir solo este por WhatsApp</button>
-    <div class="pista">El precio final se confirma en el chat.</div>
-  </div>
-</div>
-
 <div class="toast" id="toast"></div>
 
 <script>
@@ -370,7 +335,7 @@
   var CLAVE_CLIENTE = "eljerezano_cliente_v1";
 
   var estado = {
-    negocio: {nombre:"El Jerezano", slogan:"", ciudad:"", whatsapp:"", telefono:"", horario:"", notas:"", moneda:"MXN", logo:""},
+    negocio: {nombre:"El Jerezano", slogan:"", ciudad:"", whatsapp:"", telefono:"", horario:"", notas:"", moneda:"MXN"},
     productos: [],
     actualizado: 0,
     filtro: "Todas",
@@ -491,7 +456,6 @@
   function pintarEncabezado(){
     var n = estado.negocio;
     $("negocio-nombre").textContent = n.nombre || "Catálogo";
-    $("negocio-logo").src = n.logo ? n.logo : "logo.png";
     document.title = "Catálogo · " + (n.nombre || "El Jerezano");
     $("negocio-eslogan").textContent = n.slogan || "";
     $("negocio-eslogan").style.display = n.slogan ? "" : "none";
@@ -583,7 +547,6 @@
               '<div class="precio">' + formatear(p.precio, true) + "</div>" +
               '<div class="unidad">por ' + escapar(p.unidad || "kg") + "</div>" +
             "</div>" +
-            '<div class="pista-tarjeta">Ver ficha</div>' +
             (p.disponible
               ? '<div class="contenedor-mas"><button class="mas" data-agregar="' + escapar(p.id) + '" aria-label="Agregar">+</button>' +
                 (cant ? '<span class="cant">' + cant + "</span>" : "") + "</div>"
@@ -604,7 +567,11 @@
 
     Array.prototype.forEach.call(grid.querySelectorAll(".card"), function(tarjeta){
       tarjeta.addEventListener("click", function(){
-        abrirDetalle(tarjeta.getAttribute("data-id"));
+        var p = productoPorId(tarjeta.getAttribute("data-id"));
+        if (p && p.disponible) {
+          cambiarCantidad(p.id, 1);
+          avisar("Agregado a tu pedido");
+        }
       });
     });
   }
@@ -661,104 +628,14 @@
     });
   }
 
-  function mostrarPanel(idPanel, idVelo){
-    $(idVelo).classList.add("visible");
-    $(idPanel).classList.add("visible");
+  function abrirPanel(){
+    $("velo").classList.add("visible");
+    $("panel").classList.add("visible");
   }
 
-  function ocultarPanel(idPanel, idVelo){
-    $(idVelo).classList.remove("visible");
-    $(idPanel).classList.remove("visible");
-  }
-
-  function abrirPanel(){ mostrarPanel("panel", "velo"); }
-
-  function cerrarPanel(){ ocultarPanel("panel", "velo"); }
-
-  /* ---------------- Ficha del producto ---------------- */
-
-  var detalleProducto = null;
-  var detalleCantidad = 1;
-
-  function abrirDetalle(id){
-    var p = productoPorId(id);
-    if (!p) return;
-    detalleProducto = p;
-    detalleCantidad = cantidadDe(id) || 1;
-    pintarDetalle();
-    mostrarPanel("panel-detalle", "velo-detalle");
-  }
-
-  function pintarDetalle(){
-    var p = detalleProducto;
-    if (!p) return;
-    var total = (Number(p.precio) || 0) * detalleCantidad;
-    var foto = p.imagen
-      ? '<img src="' + escapar(p.imagen) + '" alt="' + escapar(p.nombre) + '">'
-      : '<div class="sin-foto"><span>🧄</span><span>Sin foto</span></div>';
-
-    $("detalle-categoria").textContent = p.categoria || "Producto";
-    $("detalle-cuerpo").innerHTML =
-      '<div class="detalle">' +
-        '<div class="detalle-foto">' + foto + '</div>' +
-        '<h3 class="detalle-nombre">' + escapar(p.nombre) + '</h3>' +
-        '<div class="detalle-precio">' +
-          '<span class="precio-grande">' + formatear(p.precio, true) + '</span>' +
-          '<span class="unidad">por ' + escapar(p.unidad || "kg") + '</span>' +
-        '</div>' +
-        '<p class="detalle-desc">' +
-          (p.descripcion ? escapar(p.descripcion) : 'Sin descripción. Pregúntanos por WhatsApp.') +
-        '</p>' +
-        '<div class="detalle-cant">' +
-          '<span>Cantidad</span>' +
-          '<div class="stepper">' +
-            '<button data-det-menos aria-label="Menos">−</button>' +
-            '<span>' + detalleCantidad + '</span>' +
-            '<button data-det-mas aria-label="Más">+</button>' +
-          '</div>' +
-          '<b>' + formatear(total, false) + '</b>' +
-        '</div>' +
-        (p.destacado ? '<div style="margin-top:12px"><span class="etiqueta" style="position:static">DESTACADO</span></div>' : '') +
-        (p.disponible ? '' : '<p class="aviso-agotado">Por ahora está agotado. Pregúntanos por WhatsApp.</p>') +
-      '</div>';
-
-    var mas = $("detalle-cuerpo").querySelector("[data-det-mas]");
-    var menos = $("detalle-cuerpo").querySelector("[data-det-menos]");
-    if (mas) mas.addEventListener("click", function(){ detalleCantidad++; pintarDetalle(); });
-    if (menos) menos.addEventListener("click", function(){ if (detalleCantidad > 1) { detalleCantidad--; pintarDetalle(); } });
-
-    $("detalle-agregar").disabled = !p.disponible;
-    $("detalle-agregar").style.opacity = p.disponible ? "1" : ".5";
-  }
-
-  function agregarDesdeDetalle(){
-    var p = detalleProducto;
-    if (!p || !p.disponible) return;
-    fijarCantidad(p.id, detalleCantidad);
-    ocultarPanel("panel-detalle", "velo-detalle");
-    avisar("Agregado a tu pedido");
-  }
-
-  function pedirSoloEste(){
-    var p = detalleProducto;
-    if (!p) return;
-    var n = estado.negocio;
-    var numero = (n.whatsapp || "").replace(/\D/g, "");
-    if (!numero){ avisar("Falta configurar el número de WhatsApp."); return; }
-    var total = (Number(p.precio) || 0) * detalleCantidad;
-    var lineas = ["*PEDIDO — " + (n.nombre || "Catálogo") + "*", "────────────────────"];
-    lineas.push("• *" + p.nombre + "*");
-    lineas.push("   " + detalleCantidad + " " + (p.unidad || "kg") + " × " + formatear(p.precio, true) + " = " + formatear(total, false));
-    lineas.push("────────────────────");
-    lineas.push("*Total estimado: " + formatear(total, false) + "*");
-    lineas.push("");
-    lineas.push("Nombre: " + (($("campo-nombre") && $("campo-nombre").value.trim()) || ""));
-    lineas.push("Entrega: " + (estado.entrega || "Recoger en el local"));
-    var dir = ($("campo-direccion") && $("campo-direccion").value.trim()) || "";
-    if (dir) lineas.push("Dirección: " + dir);
-    var notas = ($("campo-notas") && $("campo-notas").value.trim()) || "";
-    if (notas) lineas.push("Notas: " + notas);
-    window.open("https://wa.me/" + numero + "?text=" + encodeURIComponent(lineas.join("\n")), "_blank");
+  function cerrarPanel(){
+    $("velo").classList.remove("visible");
+    $("panel").classList.remove("visible");
   }
 
   var temporizador;
@@ -868,10 +745,6 @@
   $("flotante").addEventListener("click", abrirPanel);
   $("cerrar").addEventListener("click", cerrarPanel);
   $("velo").addEventListener("click", cerrarPanel);
-  $("cerrar-detalle").addEventListener("click", function(){ ocultarPanel("panel-detalle", "velo-detalle"); });
-  $("velo-detalle").addEventListener("click", function(){ ocultarPanel("panel-detalle", "velo-detalle"); });
-  $("detalle-agregar").addEventListener("click", agregarDesdeDetalle);
-  $("detalle-pedir").addEventListener("click", pedirSoloEste);
   $("enviar").addEventListener("click", enviarPedido);
   $("vaciar").addEventListener("click", function(){
     estado.carrito = {};
@@ -881,10 +754,7 @@
   });
 
   document.addEventListener("keydown", function(ev){
-    if (ev.key === "Escape") {
-      cerrarPanel();
-      ocultarPanel("panel-detalle", "velo-detalle");
-    }
+    if (ev.key === "Escape") cerrarPanel();
   });
 
   /* ---- Datos del cliente (se recuerdan en el teléfono) ---- */
