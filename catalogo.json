@@ -12,6 +12,17 @@
     },
     "productos": [
         {
+            "id": 4,
+            "nombre": "ajo coronas",
+            "descripcion": "¿Buscas ajos de calidad para surtir tu negocio? En El Jerezano tenemos ajo en corona, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan un producto de calidad para sus clientes.",
+            "precio": 80.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p4_75dc1c7c.jpg?v=75dc1c7c",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 2,
             "nombre": "ajo desgranado",
             "descripcion": "¿Tienes carnicería o preparas productos para la venta? Nuestro ajo degranado es ideal para moler, elaborar marinados, adobos, chorizos, longanizas, salsas y preparados de carne.ajos número chicos",
@@ -45,6 +56,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791792867630,
+    "actualizado": 1791792933656,
     "version": 1
 }
