@@ -55,6 +55,17 @@
             "destacado": false
         },
         {
+            "id": 9,
+            "nombre": "chile morita",
+            "descripcion": "Chile seco de color rojo oscuro, sabor ahumado y picor característico. Ideal para preparar salsas, adobos, moles y deliciosos platillos mexicanos.",
+            "precio": 140.0,
+            "unidad": "kg",
+            "categoria": "Chiles secos",
+            "imagen": "productos/p9_898b5ac4.jpg?v=898b5ac4",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 4,
             "nombre": "Coronas",
             "descripcion": "¿Buscas ajos de calidad para surtir tu negocio? En El Jerezano tenemos ajo en corona, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan un producto de calidad para sus clientes.",
@@ -99,6 +110,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791779214163,
+    "actualizado": 1791779497712,
     "version": 1
 }
