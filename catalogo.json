@@ -11,6 +11,17 @@
     },
     "productos": [
         {
+            "id": 5,
+            "nombre": "ajo cerrado número grande",
+            "descripcion": "¡Calidad que destaca y satisface a tus clientes!\n¿Buscas ajo grande y de calidad para tu negocio? En El Jerezano tenemos ajo cerrado de número grande, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan ofrecer un producto de excelente presentación.",
+            "precio": 100.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p5_5667f43c.jpg?v=5667f43c",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 2,
             "nombre": "ajo degranado",
             "descripcion": "¿Tienes carnicería o preparas productos para la venta? Nuestro ajo degranado es ideal para moler, elaborar marinados, adobos, chorizos, longanizas, salsas y preparados de carne.",
@@ -55,6 +66,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791778188210,
+    "actualizado": 1791778442861,
     "version": 1
 }
