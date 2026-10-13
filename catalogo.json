@@ -73,7 +73,7 @@
             "precio": 100.0,
             "unidad": "kg",
             "categoria": "Ajos",
-            "imagen": "productos/p6_f6177dd9.jpg?v=f6177dd9",
+            "imagen": "productos/p6_b379bc8a.jpg?v=b379bc8a",
             "disponible": true,
             "destacado": false
         },
@@ -133,6 +133,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791849311068,
+    "actualizado": 1791849826269,
     "version": 1
 }
