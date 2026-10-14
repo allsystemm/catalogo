@@ -89,6 +89,17 @@
             "destacado": false
         },
         {
+            "id": 14,
+            "nombre": "chile guajillo en polvo",
+            "descripcion": "Chile guajillo molido, de color rojo intenso y sabor característico. Ideal para preparar salsas, adobos, marinados, guisos y sazonar una gran variedad de platillos mexicanos. Práctico y versátil para cocinas, restaurantes y uso doméstico.",
+            "precio": 80.0,
+            "unidad": "kg",
+            "categoria": "Chiles secos",
+            "imagen": "productos/p14_c5678d05.jpg?v=c5678d05",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 11,
             "nombre": "chile mora",
             "descripcion": "Chile seco de sabor intenso, aroma característico y picor agradable. Ideal para preparar salsas, adobos, moles y una gran variedad de recetas tradicionales mexicanas.",
@@ -144,6 +155,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791945248489,
+    "actualizado": 1791945639929,
     "version": 1
 }
