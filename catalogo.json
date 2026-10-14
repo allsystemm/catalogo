@@ -111,6 +111,17 @@
             "destacado": false
         },
         {
+            "id": 13,
+            "nombre": "chile pulla",
+            "descripcion": "Chile seco de color rojo intenso, sabor característico y picor pronunciado. Ideal para preparar salsas, adobos, caldos y guisos tradicionales mexicanos. Excelente opción para restaurantes, cocinas y uso doméstico.",
+            "precio": 160.0,
+            "unidad": "kg",
+            "categoria": "Chiles secos",
+            "imagen": "productos/p13_6c377e61.jpg?v=6c377e61",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 8,
             "nombre": "chile teja sin pata",
             "descripcion": "Chile seco de sabor intenso y característico, ideal para preparar salsas, adobos, guisos y diferentes recetas de la cocina mexicana. Excelente opción para cocinas, restaurantes, taquerías y negocios de alimentos.",
@@ -133,6 +144,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791849832940,
+    "actualizado": 1791945235657,
     "version": 1
 }
