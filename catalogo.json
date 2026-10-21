@@ -8,7 +8,8 @@
         "horario": "Lunes a sábado de 9:00 a 19:00",
         "notas": "Precios sujetos a cambio sin previo aviso. Aparta tu pedido por WhatsApp.",
         "moneda": "MXN",
-        "logo": "logo.png?v=67f9b263"
+        "logo": "logo.png?v=67f9b263",
+        "contador": "el-jerezano-catalogo"
     },
     "productos": [
         {
@@ -155,6 +156,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1791948218730,
+    "actualizado": 1792556266155,
     "version": 1
 }
