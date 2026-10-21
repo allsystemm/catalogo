@@ -41,7 +41,7 @@
             "precio": 60.0,
             "unidad": "pieza",
             "categoria": "Ajos",
-            "imagen": "productos/p5_6a3e1d8b.jpg?v=6a3e1d8b",
+            "imagen": "productos/p5_f87164fb.jpg?v=f87164fb",
             "disponible": true,
             "destacado": false
         },
@@ -167,6 +167,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1792604612323,
+    "actualizado": 1792609707916,
     "version": 1
 }
