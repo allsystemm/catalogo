@@ -812,6 +812,21 @@
     window.open(url, "_blank");
   }
 
+  /* ---------------- Contador de visitas ---------------- */
+
+  function registrarVisita(){
+    var clave = estado.negocio && estado.negocio.contador;
+    if (!clave) return;
+    try {
+      if (sessionStorage.getItem("visita_contada") === "1") return;
+      sessionStorage.setItem("visita_contada", "1");
+    } catch(e){}
+    fetch("https://abacus.jasoncameron.dev/hit/" + encodeURIComponent(clave) + "/visitas")
+      .then(function(r){ return r.json(); })
+      .then(function(d){ if (d && typeof d.value === "number") estado.visitas = d.value; })
+      .catch(function(){});
+  }
+
   /* ---------------- Datos ---------------- */
 
   function esqueletos(){
@@ -838,6 +853,7 @@
         pintar();
         pintarPanel();
         pintarFlotante();
+        registrarVisita();
       })
       .catch(function(err){
         $("grid").innerHTML = "";
