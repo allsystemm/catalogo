@@ -68,6 +68,17 @@
             "destacado": false
         },
         {
+            "id": 15,
+            "nombre": "ajo pelado chicos",
+            "descripcion": "por promoción ajo pelado chicos para moler listo para hacer preparados",
+            "precio": 60.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p15_c371d576.jpg?v=c371d576",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 6,
             "nombre": "ajos número gandes",
             "descripcion": "¿Buscas ajo grande y de calidad para tu negocio? En El Jerezano tenemos ajo cerrado de número grande, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan ofrecer un producto de excelente presentación.\n✅ Ajo de buen tamaño y calidad. ✅ Excelente presentación para la venta. ✅ Ideal para reventa y distribución. ✅ Precios especiales para compras de mayoreo.",
@@ -156,6 +167,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1792557012463,
+    "actualizado": 1792604603278,
     "version": 1
 }
