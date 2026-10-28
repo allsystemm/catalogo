@@ -57,6 +57,17 @@
             "destacado": false
         },
         {
+            "id": 16,
+            "nombre": "ajo para trabajar",
+            "descripcion": "oferta de ajo aprillas de 25 kilos ajo para trabajar #8,9,10 buena calidad por tonelada la ponemos a 17 pesos",
+            "precio": 20.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p16_8b807ab9.jpg?v=8b807ab9",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 1,
             "nombre": "ajo pelado",
             "descripcion": "Ajo pelado fresco y listo para usar, ideal para cocinas económicas, restaurantes, carnicerías y negocios de alimentos. Ahorra tiempo en limpieza y preparación, con la practicidad de tener el ajo listo para trabajar al momento. Calidad y comodidad para tu negocio. ¡Listo para cocinar!",
@@ -167,6 +178,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1792609799123,
+    "actualizado": 1793230565145,
     "version": 1
 }
