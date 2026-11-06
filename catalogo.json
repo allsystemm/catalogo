@@ -176,8 +176,19 @@
             "imagen": "productos/p12_e4708872.jpg?v=e4708872",
             "disponible": true,
             "destacado": false
+        },
+        {
+            "id": 17,
+            "nombre": "tamarindo",
+            "descripcion": "",
+            "precio": 0.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p17_7e3a5c3f.jpg?v=7e3a5c3f",
+            "disponible": true,
+            "destacado": false
         }
     ],
-    "actualizado": 1793860392928,
+    "actualizado": 1793987398117,
     "version": 1
 }
