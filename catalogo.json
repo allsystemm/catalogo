@@ -26,13 +26,13 @@
         {
             "id": 2,
             "nombre": "ajo desgranado",
-            "descripcion": "¿Tienes carnicería o preparas productos para la venta? Nuestro ajo degranado es ideal para moler, elaborar marinados, adobos, chorizos, longanizas, salsas y preparados de carne.ajos número chicos",
-            "precio": 50.0,
+            "descripcion": "arpillas de 10 kilos",
+            "precio": 30.0,
             "unidad": "kg",
             "categoria": "Ajos",
-            "imagen": "productos/p2_60c58c20.jpg?v=60c58c20",
+            "imagen": "productos/p2_6f0f4419.jpg?v=6f0f4419",
             "disponible": true,
-            "destacado": false
+            "destacado": true
         },
         {
             "id": 5,
@@ -200,6 +200,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1794443854302,
+    "actualizado": 1794443945947,
     "version": 1
 }
