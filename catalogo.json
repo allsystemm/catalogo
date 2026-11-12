@@ -178,6 +178,17 @@
             "destacado": false
         },
         {
+            "id": 18,
+            "nombre": "oferta ajo corona para degranar por caja 10 kilos",
+            "descripcion": "caja de 10 kilos",
+            "precio": 40.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p18_a245f563.jpg?v=a245f563",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 17,
             "nombre": "tamarindo",
             "descripcion": "",
@@ -189,6 +200,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1793987425909,
+    "actualizado": 1794443807467,
     "version": 1
 }
