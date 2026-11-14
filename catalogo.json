@@ -13,6 +13,17 @@
     },
     "productos": [
         {
+            "id": 18,
+            "nombre": "ajo #8",
+            "descripcion": "caja de 10 kilos",
+            "precio": 60.0,
+            "unidad": "kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p18_d425e5fb.jpg?v=d425e5fb",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 4,
             "nombre": "ajo coronas",
             "descripcion": "¿Buscas ajos de calidad para surtir tu negocio? En El Jerezano tenemos ajo en corona, ideal para comerciantes, verdulerías, mercados y distribuidores que buscan un producto de calidad para sus clientes.",
@@ -53,17 +64,6 @@
             "unidad": "kg",
             "categoria": "Ajos",
             "imagen": "productos/p3_efcf582b.jpg?v=efcf582b",
-            "disponible": true,
-            "destacado": false
-        },
-        {
-            "id": 16,
-            "nombre": "ajo para trabajar",
-            "descripcion": "oferta de ajo aprillas de 25 kilos ajo para trabajar #8,9,10 buena calidad por tonelada la ponemos a 17 pesos",
-            "precio": 20.0,
-            "unidad": "kg",
-            "categoria": "Ajos",
-            "imagen": "productos/p16_8b807ab9.jpg?v=8b807ab9",
             "disponible": true,
             "destacado": false
         },
@@ -178,17 +178,6 @@
             "destacado": false
         },
         {
-            "id": 18,
-            "nombre": "oferta ajo corona para degranar por caja 10 kilos",
-            "descripcion": "caja de 10 kilos",
-            "precio": 40.0,
-            "unidad": "kg",
-            "categoria": "Ajos",
-            "imagen": "productos/p18_a245f563.jpg?v=a245f563",
-            "disponible": true,
-            "destacado": false
-        },
-        {
             "id": 17,
             "nombre": "tamarindo",
             "descripcion": "",
@@ -200,6 +189,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1794443955737,
+    "actualizado": 1794626183762,
     "version": 1
 }
