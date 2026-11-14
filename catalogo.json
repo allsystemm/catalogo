@@ -17,7 +17,7 @@
             "nombre": "ajo #8",
             "descripcion": "caja de 10 kilos",
             "precio": 60.0,
-            "unidad": "kg",
+            "unidad": "caja",
             "categoria": "Ajos",
             "imagen": "productos/p18_d425e5fb.jpg?v=d425e5fb",
             "disponible": true,
@@ -189,6 +189,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1794626193371,
+    "actualizado": 1794626242844,
     "version": 1
 }
