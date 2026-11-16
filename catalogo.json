@@ -101,6 +101,17 @@
             "destacado": false
         },
         {
+            "id": 19,
+            "nombre": "caguate tostado natutaral",
+            "descripcion": "cacahuate pregunté por mayoreo",
+            "precio": 25.0,
+            "unidad": "1/4 kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p19_44b4f4bb.jpg?v=44b4f4bb",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 7,
             "nombre": "Chile guajillo",
             "descripcion": "Chile seco de color rojo intenso, sabor característico y picor moderado. Ideal para preparar salsas, adobos, moles, marinados y una gran variedad de platillos mexicanos.",
@@ -189,6 +200,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1794753744235,
+    "actualizado": 1794850640915,
     "version": 1
 }
