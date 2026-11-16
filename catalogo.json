@@ -200,6 +200,17 @@
             "destacado": false
         },
         {
+            "id": 21,
+            "nombre": "Pimienta molida",
+            "descripcion": "pimienta molida mayoreo y menudeo",
+            "precio": 25.0,
+            "unidad": "100 g",
+            "categoria": "Semillas",
+            "imagen": "productos/p21_be44ec20.jpg?v=be44ec20",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 17,
             "nombre": "tamarindo",
             "descripcion": "",
@@ -211,6 +222,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1794850772989,
+    "actualizado": 1794854734051,
     "version": 1
 }
