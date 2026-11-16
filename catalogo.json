@@ -200,6 +200,17 @@
             "destacado": false
         },
         {
+            "id": 22,
+            "nombre": "Papicra molida",
+            "descripcion": "paprica molida mayoreo y menudeo",
+            "precio": 20.0,
+            "unidad": "100 g",
+            "categoria": "Semillas",
+            "imagen": "productos/p22_b5197cbc.jpg?v=b5197cbc",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 21,
             "nombre": "Pimienta molida",
             "descripcion": "pimienta molida mayoreo y menudeo",
@@ -222,6 +233,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1794854896940,
+    "actualizado": 1794854983246,
     "version": 1
 }
