@@ -167,6 +167,17 @@
             "destacado": false
         },
         {
+            "id": 20,
+            "nombre": "chile seco meco chipotle",
+            "descripcion": "chile seco pregunta por el mayoreo",
+            "precio": 70.0,
+            "unidad": "1/4 kg",
+            "categoria": "Ajos",
+            "imagen": "productos/p20_ace92253.jpg?v=ace92253",
+            "disponible": true,
+            "destacado": false
+        },
+        {
             "id": 8,
             "nombre": "chile teja sin pata",
             "descripcion": "Chile seco de sabor intenso y característico, ideal para preparar salsas, adobos, guisos y diferentes recetas de la cocina mexicana. Excelente opción para cocinas, restaurantes, taquerías y negocios de alimentos.",
@@ -200,6 +211,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1794850640915,
+    "actualizado": 1794850728437,
     "version": 1
 }
