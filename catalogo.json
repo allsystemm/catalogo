@@ -38,7 +38,7 @@
             "id": 2,
             "nombre": "ajo desgranado",
             "descripcion": "arpillas de 10 kilos",
-            "precio": 30.0,
+            "precio": 40.0,
             "unidad": "kg",
             "categoria": "Ajos",
             "imagen": "productos/p2_6f0f4419.jpg?v=6f0f4419",
@@ -233,6 +233,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1795134237364,
+    "actualizado": 1795535459710,
     "version": 1
 }
