@@ -150,7 +150,7 @@
             "descripcion": "Chile seco de color rojo oscuro, sabor ahumado y picor característico. Ideal para preparar salsas, adobos, moles y deliciosos platillos mexicanos.",
             "precio": 140.0,
             "unidad": "kg",
-            "categoria": "Ajos",
+            "categoria": "Chiles secos",
             "imagen": "productos/p9_898b5ac4.jpg?v=898b5ac4",
             "disponible": true,
             "destacado": false
@@ -233,6 +233,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1795708990800,
+    "actualizado": 1795709026951,
     "version": 1
 }
