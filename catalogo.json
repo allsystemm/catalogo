@@ -102,7 +102,7 @@
         },
         {
             "id": 19,
-            "nombre": "caguate tostado natutaral",
+            "nombre": "cacaguate tostado natutaral",
             "descripcion": "cacahuate pregunté por mayoreo",
             "precio": 25.0,
             "unidad": "1/4 kg",
@@ -233,6 +233,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1795707486568,
+    "actualizado": 1795708500691,
     "version": 1
 }
