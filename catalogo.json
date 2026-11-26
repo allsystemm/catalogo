@@ -106,7 +106,7 @@
             "descripcion": "cacahuate pregunté por mayoreo",
             "precio": 25.0,
             "unidad": "1/4 kg",
-            "categoria": "Ajos",
+            "categoria": "Semillas",
             "imagen": "productos/p19_44b4f4bb.jpg?v=44b4f4bb",
             "disponible": true,
             "destacado": false
@@ -233,6 +233,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1795708659178,
+    "actualizado": 1795708720925,
     "version": 1
 }
