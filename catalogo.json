@@ -172,7 +172,7 @@
             "descripcion": "chile seco pregunta por el mayoreo",
             "precio": 70.0,
             "unidad": "1/4 kg",
-            "categoria": "Ajos",
+            "categoria": "Chiles secos",
             "imagen": "productos/p20_ace92253.jpg?v=ace92253",
             "disponible": true,
             "destacado": false
@@ -233,6 +233,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1795708720925,
+    "actualizado": 1795708769719,
     "version": 1
 }
