@@ -201,7 +201,7 @@
         },
         {
             "id": 22,
-            "nombre": "Papicra molida",
+            "nombre": "Papika molida",
             "descripcion": "paprica molida mayoreo y menudeo",
             "precio": 20.0,
             "unidad": "100 g",
@@ -233,6 +233,6 @@
             "destacado": false
         }
     ],
-    "actualizado": 1795708533412,
+    "actualizado": 1795708572349,
     "version": 1
 }
