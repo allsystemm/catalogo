@@ -227,12 +227,12 @@
             "descripcion": "",
             "precio": 80.0,
             "unidad": "kg",
-            "categoria": "Ajos",
+            "categoria": "Semillas",
             "imagen": "productos/p17_7e3a5c3f.jpg?v=7e3a5c3f",
             "disponible": true,
             "destacado": false
         }
     ],
-    "actualizado": 1795708769719,
+    "actualizado": 1795708794738,
     "version": 1
 }
